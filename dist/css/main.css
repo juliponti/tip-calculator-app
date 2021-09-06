@@ -1,0 +1,509 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.header-title h1 {
+  font-size: 1rem;
+  letter-spacing: 5px;
+  color: #5e7a7d;
+}
+
+.main__container {
+  width: 61%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 15px;
+}
+
+.card__left-side {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__right-side {
+  width: 50%;
+  height: 85%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: #00494d;
+}
+
+.bill__container {
+  width: 100%;
+  position: relative;
+}
+
+.bill__container h2 {
+  font-size: 1rem;
+  color: #5e7a7d;
+}
+
+.bill__container img {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  width: 12px;
+  height: 18px;
+}
+
+input.bill-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: #f4fafa;
+  color: #00494d;
+}
+
+input.bill-input::-webkit-input-placeholder {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7f9c9f;
+}
+
+input.bill-input:-ms-input-placeholder {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7f9c9f;
+}
+
+input.bill-input::-ms-input-placeholder {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7f9c9f;
+}
+
+input.bill-input::placeholder {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7f9c9f;
+}
+
+input.bill-input:focus {
+  border: solid 2px #26c0ab;
+}
+
+.select-tip__container {
+  width: 100%;
+  margin: 26px 0;
+}
+
+.select-tip__container h2 {
+  font-size: 1rem;
+  color: #5e7a7d;
+}
+
+.select-tip-porcents__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 9px;
+  margin: 5px 0;
+}
+
+.select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
+  width: 31%;
+  height: 40px;
+  background-color: #00494d;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.select-tip-porcents__container .tip-btn:hover, .select-tip-porcents__container input:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.select-tip-porcents__container .tip-btn:active, .select-tip-porcents__container input:active {
+  background-color: #94ebdf;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.select-tip-porcents__container input {
+  background-color: #f4fafa;
+  color: #00494d;
+  cursor: text;
+  text-align: right;
+  padding: 5px;
+}
+
+.select-tip-porcents__container input::-webkit-input-placeholder {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 5px 0;
+  color: #7f9c9f;
+}
+
+.select-tip-porcents__container input:-ms-input-placeholder {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 5px 0;
+  color: #7f9c9f;
+}
+
+.select-tip-porcents__container input::-ms-input-placeholder {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 5px 0;
+  color: #7f9c9f;
+}
+
+.select-tip-porcents__container input::placeholder {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 5px 0;
+  color: #7f9c9f;
+}
+
+.select-tip-porcents__container input:focus {
+  border: solid 2px #26c0ab;
+}
+
+.select-tip-porcents__container input:hover {
+  background-color: #f4fafa;
+  border: solid 2px #c5e4e7;
+}
+
+.number-of-people__container {
+  width: 100%;
+  position: relative;
+}
+
+.number-of-people__container h2 {
+  font-size: 1rem;
+  color: #5e7a7d;
+  display: inline;
+}
+
+.number-of-people__container img {
+  position: absolute;
+  bottom: 17px;
+  left: 18px;
+  width: 12px;
+  height: 15px;
+}
+
+.error-menssage {
+  width: 50%;
+  display: inline-block;
+  font-size: 0.75rem;
+  color: transparent;
+  text-align: right;
+}
+
+.error-menssage-on {
+  color: #f78b59;
+}
+
+.number-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: #f4fafa;
+  color: #00494d;
+}
+
+.number-input:focus {
+  border: solid 2px #26c0ab;
+}
+
+.number-input::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+.number-input:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.number-input::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.number-input::placeholder {
+  color: #7f9c9f;
+}
+
+.error {
+  border: solid 3px #f78b59;
+}
+
+.error:focus {
+  border: solid 3px #f78b59;
+}
+
+.top__container {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tip-amount__container,
+.total__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tip-amount__text-container h2,
+.total__text-container h2 {
+  font-size: 1rem;
+  color: #f4fafa;
+}
+
+.tip-amount__text-container h3,
+.total__text-container h3 {
+  font-size: 0.75rem;
+  color: #7f9c9f;
+}
+
+.tip-amount__number,
+.total__number {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #26c0ab;
+}
+
+.reset-btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 42px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-size: 1rem;
+  font-weight: 900;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:active {
+  background-color: #94ebdf;
+}
+
+.reset-btn:disabled {
+  background-color: #0d696e;
+}
+
+.footer span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.footer span a {
+  font-family: inherit;
+  font-size: inherit;
+  color: #00494d;
+  text-decoration: none;
+}
+
+.footer span .me {
+  color: #5e7a7d;
+}
+
+@media screen and (max-width: 990px) {
+  body {
+    height: 100%;
+  }
+  body .header-title,
+  body .footer {
+    margin: 20px;
+  }
+  .main__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card__left-side {
+    width: 100%;
+    height: 50%;
+  }
+  .card__right-side {
+    width: 85%;
+    height: 50%;
+  }
+  .select-tip__container {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    width: 100vh;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    height: 100%;
+  }
+  .main__container {
+    width: 90%;
+  }
+  .card__left-side {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+  .select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
+    width: 133px;
+  }
+  .card__left-side {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
+    width: 91px;
+  }
+  .card__left-side {
+    padding: 30px 30px 0 30px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

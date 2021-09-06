@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+// Colors
+
+$primary-color: hsl(172, 67%, 45%);
+$active-color: hsl(172, 68%, 75%);
+$disabled-color: hsl(183, 79%, 24%);
+$error-color: hsl(19, 91%, 66%);
+
+$white: hsl(0, 0%, 100%);
+
+$cyan-100: hsl(189, 41%, 97%);
+$cyan-200: hsl(185, 41%, 84%);
+$cyan-300: hsl(184, 14%, 56%);
+$cyan-400: hsl(186, 14%, 43%);
+$cyan-500: hsl(183, 100%, 15%);
+
+// Fonts
+
+$font-sizes: (
+  "regular": 1.5rem,
+  // input - buttons
+  "small": 1rem,
+  // text headers
+  "tiny": 0.75rem,
+  // person text
+  "big": 2.3rem // tip amount/tip total number,,,,,,,,,,,
+);
+
+@mixin flexCenter($direction: row, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin input {
+  border: none;
+  outline: none;
+
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+
+  text-align: right;
+  font-weight: 700;
+  font-size: map-get($font-sizes, regular);
+
+  background-color: $cyan-100;
+  color: $cyan-500;
+}
+
+$transition: all 0.3s ease;

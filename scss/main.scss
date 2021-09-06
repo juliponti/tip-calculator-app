@@ -1,0 +1,338 @@
+@import "configurations";
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $cyan-200;
+  @include flexCenter(column, space-evenly);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.header-title h1 {
+  font-size: map-get($font-sizes, small);
+  letter-spacing: 5px;
+  color: $cyan-400;
+}
+
+.main__container {
+  width: 61%;
+  background-color: $white;
+  @include flexCenter(row);
+  border-radius: 15px;
+}
+
+.card__left-side {
+  width: 50%;
+  height: 100%;
+
+  padding: 30px;
+
+  @include flexCenter(column, space-evenly, flex-start);
+}
+
+.card__right-side {
+  width: 50%;
+  height: 85%;
+
+  padding: 30px;
+
+  @include flexCenter(column, space-between, flex-start);
+
+  margin: 20px;
+  border-radius: 15px;
+  background-color: $cyan-500;
+}
+
+.bill__container {
+  width: 100%;
+  position: relative;
+
+  h2 {
+    font-size: map-get($font-sizes, small);
+    color: $cyan-400;
+  }
+
+  img {
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+    width: 12px;
+    height: 18px;
+  }
+}
+
+input.bill-input {
+  @include input;
+
+  &::placeholder {
+    text-align: right;
+    font-weight: 700;
+    font-size: map-get($font-sizes, regular);
+    color: $cyan-300;
+  }
+
+  &:focus {
+    border: solid 2px $primary-color;
+  }
+}
+
+.select-tip__container {
+  width: 100%;
+  margin: 26px 0;
+
+  h2 {
+    font-size: map-get($font-sizes, small);
+    color: $cyan-400;
+  }
+}
+
+.select-tip-porcents__container {
+  width: 100%;
+  @include flexCenter(row, flex-start);
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 5px 0;
+
+  .tip-btn {
+    width: 31%;
+    height: 40px;
+    background-color: $cyan-500;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: $white;
+    font-size: map-get($font-sizes, regular);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .tip-btn:hover {
+    background-color: $primary-color;
+    color: $cyan-500;
+    transition: $transition;
+  }
+
+  .tip-btn:active {
+    background-color: $active-color;
+    transition: $transition;
+  }
+
+  input {
+    @extend .tip-btn;
+    background-color: $cyan-100;
+    color: $cyan-500;
+    cursor: text;
+    text-align: right;
+    padding: 5px;
+  }
+
+  input::placeholder {
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 5px 0;
+    color: $cyan-300;
+  }
+
+  input:focus {
+    border: solid 2px $primary-color;
+  }
+
+  input:hover {
+    background-color: $cyan-100;
+    border: solid 2px $cyan-200;
+  }
+}
+
+.number-of-people__container {
+  width: 100%;
+  position: relative;
+
+  h2 {
+    font-size: map-get($font-sizes, small);
+    color: $cyan-400;
+    display: inline;
+  }
+
+  img {
+    position: absolute;
+    bottom: 17px;
+    left: 18px;
+    width: 12px;
+    height: 15px;
+  }
+}
+
+.error-menssage {
+  width: 50%;
+  display: inline-block;
+  font-size: map-get($font-sizes, tiny);
+  color: transparent;
+  text-align: right;
+  &-on {
+    color: $error-color;
+  }
+}
+
+.number-input {
+  @include input;
+
+  &:focus {
+    border: solid 2px $primary-color;
+  }
+
+  &::placeholder {
+    color: $cyan-300;
+  }
+}
+
+.error {
+  border: solid 3px $error-color;
+  &:focus {
+    border: solid 3px $error-color;
+  }
+}
+
+.top__container {
+  width: 100%;
+  height: 50%;
+  @include flexCenter(column, space-between);
+}
+
+.tip-amount__container,
+.total__container {
+  width: 100%;
+  @include flexCenter(row, space-between);
+}
+
+.tip-amount__text-container,
+.total__text-container {
+  h2 {
+    font-size: map-get($font-sizes, small);
+    color: $cyan-100;
+  }
+
+  h3 {
+    font-size: map-get($font-sizes, tiny);
+    color: $cyan-300;
+  }
+}
+
+.tip-amount__number,
+.total__number {
+  font-size: map-get($font-sizes, big);
+  font-weight: 900;
+  color: $primary-color;
+}
+
+.reset-btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 42px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: $cyan-500;
+  font-size: map-get($font-sizes, small);
+  font-weight: 900;
+  transition: $transition;
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}
+
+.footer {
+  span {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: map-get($font-sizes, small);
+    a {
+      font-family: inherit;
+      font-size: inherit;
+      color: $cyan-500;
+      text-decoration: none;
+    }
+    .me {
+      color: $cyan-400;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  body {
+    height: 100%;
+
+    .header-title,
+    .footer {
+      margin: 20px;
+    }
+  }
+  .main__container {
+    @include flexCenter(column);
+  }
+
+  .card__left-side {
+    width: 100%;
+    height: 50%;
+  }
+
+  .card__right-side {
+    width: 85%;
+    height: 50%;
+  }
+
+  .select-tip__container {
+    margin: 5px 0;
+  }
+}
+@media screen and(max-width: 540px) {
+  body {
+    width: 100vh;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    height: 100%;
+  }
+  .main__container {
+    width: 90%;
+  }
+  .card__left-side {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+  .select-tip-porcents__container {
+    .tip-btn {
+      width: 133px;
+    }
+  }
+  .card__left-side {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .select-tip-porcents__container {
+    .tip-btn {
+      width: 91px;
+    }
+  }
+
+  .card__left-side {
+    padding: 30px 30px 0 30px;
+  }
+}
