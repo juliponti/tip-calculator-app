@@ -1,6 +1,6 @@
 function bill() {
   const billValue = document.getElementById("bill-input").value;
-  return parseInt(billValue);
+  return parseInt(billValue) || 0;
 }
 
 function peopleInput() {
@@ -43,6 +43,8 @@ function customP(e) {
   if (e.keyCode === 13 && billValue !== 0 && newPercent !== 0) {
     let result = Math.ceil((billValue * newPercent) / 100);
     amountNum().innerText = "$" + result;
+  } else {
+    alert("invalid bill");
   }
 }
 
@@ -63,7 +65,7 @@ function onKeyPress(e) {
 
     amountNum().innerHTML = "$" + partialResult;
     totalNum().innerHTML = "$" + result;
-  } else if (e.keyCode === 13 && (numOfPeople == 0 || numOfPeople == " ")) {
+  } else if (e.keyCode === 13 && numOfPeople == 0) {
     peopleInput().classList.add("error");
     error.classList.add("error-menssage-on");
   }
