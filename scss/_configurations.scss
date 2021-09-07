@@ -25,11 +25,11 @@ $cyan-500: hsl(183, 100%, 15%);
 $font-sizes: (
   "regular": 1.5rem,
   // input - buttons
-  "small": 1rem,
+  "small": 0.8rem,
   // text headers
   "tiny": 0.75rem,
   // person text
-  "big": 2.3rem // tip amount/tip total number,,,,,,,,,,,
+  "big": 2.3rem // tip amount/tip total number,,,,,,,,,,,,,
 );
 
 @mixin flexCenter($direction: row, $justify: center, $align: center) {

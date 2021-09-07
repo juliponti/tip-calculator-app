@@ -32,13 +32,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .header-title h1 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 5px;
   color: #5e7a7d;
 }
 
 .main__container {
   width: 61%;
+  max-width: 1055px;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +104,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .bill__container h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #5e7a7d;
 }
 
@@ -168,7 +169,7 @@ input.bill-input:focus {
 }
 
 .select-tip__container h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #5e7a7d;
 }
 
@@ -269,18 +270,47 @@ input.bill-input:focus {
   position: relative;
 }
 
-.number-of-people__container h2 {
-  font-size: 1rem;
-  color: #5e7a7d;
-  display: inline;
-}
-
 .number-of-people__container img {
   position: absolute;
   bottom: 17px;
   left: 18px;
   width: 12px;
   height: 15px;
+}
+
+.num-of-people-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.num-of-people-header__container h2 {
+  font-size: 0.8rem;
+  color: #5e7a7d;
+  display: inline-block;
+  width: 63%;
+}
+
+.num-of-people-header__container .error-menssage {
+  width: 50%;
+  display: inline-block;
+  font-size: 0.75rem;
+  color: transparent;
+  text-align: right;
+}
+
+.num-of-people-header__container .error-menssage-on {
+  color: #f78b59;
 }
 
 .error-menssage {
@@ -376,7 +406,7 @@ input.bill-input:focus {
 
 .tip-amount__text-container h2,
 .total__text-container h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #f4fafa;
 }
 
@@ -402,7 +432,7 @@ input.bill-input:focus {
   border-radius: 5px;
   background-color: #26c0ab;
   color: #00494d;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 900;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -418,7 +448,7 @@ input.bill-input:focus {
 
 .footer span {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .footer span a {
@@ -430,6 +460,12 @@ input.bill-input:focus {
 
 .footer span .me {
   color: #5e7a7d;
+}
+
+@media screen and (max-width: 1104px) {
+  .select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
+    width: 47%;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -461,7 +497,7 @@ input.bill-input:focus {
   }
   .card__right-side {
     width: 85%;
-    height: 50%;
+    height: 246px;
   }
   .select-tip__container {
     margin: 5px 0;
@@ -469,8 +505,8 @@ input.bill-input:focus {
 }
 
 @media screen and (max-width: 540px) {
-  body {
-    width: 100vh;
+  .main__container {
+    width: 90%;
   }
 }
 
@@ -491,7 +527,7 @@ input.bill-input:focus {
     width: 100%;
   }
   .select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
-    width: 133px;
+    width: 48%;
   }
   .card__left-side {
     padding: 30px 30px 0 30px;
@@ -499,11 +535,20 @@ input.bill-input:focus {
 }
 
 @media screen and (max-width: 360px) {
-  .select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
-    width: 91px;
-  }
   .card__left-side {
     padding: 30px 30px 0 30px;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .main__container {
+    min-width: 292px;
+  }
+  .select-tip-porcents__container .tip-btn, .select-tip-porcents__container input {
+    min-width: 99px;
+  }
+  .num-of-people-header__container h2 {
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

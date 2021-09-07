@@ -21,6 +21,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .main__container {
   width: 61%;
+  max-width: 1055px;
   background-color: $white;
   @include flexCenter(row);
   border-radius: 15px;
@@ -151,18 +152,32 @@ input.bill-input {
   width: 100%;
   position: relative;
 
-  h2 {
-    font-size: map-get($font-sizes, small);
-    color: $cyan-400;
-    display: inline;
-  }
-
   img {
     position: absolute;
     bottom: 17px;
     left: 18px;
     width: 12px;
     height: 15px;
+  }
+}
+
+.num-of-people-header__container {
+  @include flexCenter(row, space-between);
+  h2 {
+    font-size: map-get($font-sizes, small);
+    color: $cyan-400;
+    display: inline-block;
+    width: 63%;
+  }
+  .error-menssage {
+    width: 50%;
+    display: inline-block;
+    font-size: map-get($font-sizes, tiny);
+    color: transparent;
+    text-align: right;
+    &-on {
+      color: $error-color;
+    }
   }
 }
 
@@ -266,6 +281,14 @@ input.bill-input {
   }
 }
 
+@media screen and(max-width:1104px) {
+  .select-tip-porcents__container {
+    .tip-btn {
+      width: 47%;
+    }
+  }
+}
+
 @media screen and (max-width: 990px) {
   body {
     height: 100%;
@@ -286,7 +309,7 @@ input.bill-input {
 
   .card__right-side {
     width: 85%;
-    height: 50%;
+    height: 246px;
   }
 
   .select-tip__container {
@@ -294,8 +317,8 @@ input.bill-input {
   }
 }
 @media screen and(max-width: 540px) {
-  body {
-    width: 100vh;
+  .main__container {
+    width: 90%;
   }
 }
 
@@ -317,7 +340,7 @@ input.bill-input {
   }
   .select-tip-porcents__container {
     .tip-btn {
-      width: 133px;
+      width: 48%;
     }
   }
   .card__left-side {
@@ -326,13 +349,23 @@ input.bill-input {
 }
 
 @media screen and (max-width: 360px) {
-  .select-tip-porcents__container {
-    .tip-btn {
-      width: 91px;
-    }
-  }
-
   .card__left-side {
     padding: 30px 30px 0 30px;
+  }
+}
+
+@media screen and(max-width: 334px) {
+  .main__container {
+    min-width: 292px;
+  }
+  .select-tip-porcents__container {
+    .tip-btn {
+      min-width: 99px;
+    }
+  }
+  .num-of-people-header__container {
+    h2 {
+      font-size: map-get($font-sizes, tiny);
+    }
   }
 }
